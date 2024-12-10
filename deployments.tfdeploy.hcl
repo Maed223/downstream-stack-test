@@ -1,19 +1,19 @@
+identity_token "test" {
+  audience = ["test.workload.identity"]
+}
+
 deployment "single" {
-  variables = {
+  inputs = {
     prefix    = "single"
-    instances = 1
+    instances = 2
+    ephemeral_uuid = identity_token.test.jwt
   }
 }
 
 deployment "many" {
-  variables = {
+  inputs = {
     prefix    = "many"
-    instances = 10
+    instances = 11
+    ephemeral_uuid = identity_token.test.jwt
   }
-}
-
-
-upstream_input "upstream_stack" {
-  type   = "stack"
-  source = "upstream"
 }
