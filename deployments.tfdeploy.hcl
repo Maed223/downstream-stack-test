@@ -11,3 +11,9 @@ deployment "many" {
     instances = 10
   }
 }
+
+
+upstream_input "upstream_stack" {
+  type   = "stack"
+  source = "upstream"
+}
