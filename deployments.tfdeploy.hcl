@@ -10,7 +10,7 @@ upstream_input "upstream-stack-test" {
 deployment "single" {
   inputs = {
     prefix    = "single"
-    instances = upstream_input.upstream-stack-test.output.instances
+    instances = upstream_input.upstream-stack-test.instances
   }
 }
 
