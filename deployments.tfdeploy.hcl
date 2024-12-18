@@ -4,7 +4,7 @@ identity_token "test" {
 
 upstream_input "upstream-stack-test" {
   type   = "stack"
-  source = "https://tfcdev-2cdff5a5.ngrok.app/app/hashicorp/projects/stacks-test-bed/stacks/upstream-stack-test"
+  source = "tfcdev-2cdff5a5.ngrok.app/app/hashicorp/projects/stacks-test-bed/stacks/upstream-stack-test"
 }
 
 deployment "single" {
