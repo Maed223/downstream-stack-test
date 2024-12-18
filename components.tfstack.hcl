@@ -2,7 +2,6 @@ component "pet" {
   source = "./pet"
   inputs = {
     prefix = var.prefix
-    ephemeral_uuid = var.ephemeral_uuid
   }
   providers = {
     random = provider.random.main
@@ -12,8 +11,7 @@ component "pet" {
 component "nulls" {
   source = "./nulls"
   inputs = {
-    pet       = component.pet.name
-    instances = var.instances
+    pet = component.pet.name
   }
   providers = {
     null = provider.null.main
