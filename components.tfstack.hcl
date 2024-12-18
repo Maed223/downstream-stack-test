@@ -11,7 +11,8 @@ component "pet" {
 component "nulls" {
   source = "./nulls"
   inputs = {
-    pet = component.pet.name
+    pet       = component.pet.name
+    instances = 4
   }
   providers = {
     null = provider.null.main
