@@ -10,13 +10,13 @@ upstream_input "upstream_stack_test" {
 deployment "single" {
   inputs = {
     prefix    = "single"
-    instances = upstream_input.upstream_stack_test.instances
+    instances = upstream_input.upstream_stack_test.instances_single
   }
 }
 
 deployment "many" {
   inputs = {
     prefix    = "many"
-    instances = 11
+    instances = upstream_input.upstream_stack_test.instances_many
   }
 }
