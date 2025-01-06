@@ -4,7 +4,7 @@ identity_token "test" {
 
 upstream_input "upstream_stack_test" {
   type   = "stack"
-  source = "tfcdev-2cdff5a5.ngrok.app/hashicorp/stacks-test-bed/upstream-stack-test"
+  source = "app.terraform.io/hashicorp/stacks-test-bed/upstream-stack-test"
 }
 
 deployment "single" {
