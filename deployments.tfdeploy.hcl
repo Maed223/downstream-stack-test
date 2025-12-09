@@ -1,13 +1,13 @@
+
 deployment "single" {
-  variables = {
+  inputs = {
     prefix    = "single"
     instances = 1
   }
 }
-
 deployment "many" {
-  variables = {
+  inputs = {
     prefix    = "many"
-    instances = 10
+    instances = 4
   }
 }
